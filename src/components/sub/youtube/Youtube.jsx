@@ -1,10 +1,11 @@
-import Layout from '../../common/layout/Layout';
-import styles from './Youtube.module.scss';
+// import styles from './Department.module.scss';
+// import clsx from 'clsx';
+import Layout from '../../common/layout/layout';
 
-export default function Youtube() {
+export default function Department() {
 	return (
-		<Layout title={'Youtube'} className={styles.youtube}>
-			<p>유튜브 페이지 전용 컨텐츠가 올자리</p>
+		<Layout title={'Youtube'}>
+			<p>유튜브 페이지입니다</p>
 		</Layout>
 	);
 }

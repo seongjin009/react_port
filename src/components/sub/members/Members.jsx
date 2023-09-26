@@ -1,10 +1,11 @@
-import Layout from '../../common/layout/Layout';
-import styles from './Members.module.scss';
+// import styles from './Department.module.scss';
+// import clsx from 'clsx';
+import Layout from '../../common/layout/layout';
 
 export default function Members() {
 	return (
-		<Layout title={'Members'} className={styles.members}>
-			<p>회원가입 페이지 전용 컨텐츠가 올자리</p>
+		<Layout title={'Member'}>
+			<p>회원가입 페이지입니다</p>
 		</Layout>
 	);
 }
