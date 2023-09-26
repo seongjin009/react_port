@@ -1,10 +1,11 @@
-import Layout from '../../common/layout/Layout';
-import styles from './Department.module.scss';
+// import styles from './Department.module.scss';
+// import clsx from 'clsx';
+import Layout from '../../common/layout/layout';
 
 export default function Department() {
 	return (
-		<Layout title={'Department'} className={styles.department}>
-			<p>부서소개 페이지 전용 컨텐츠가 올자리</p>
+		<Layout>
+			<p>디파트먼트 페이지입니다</p>
 		</Layout>
 	);
 }
