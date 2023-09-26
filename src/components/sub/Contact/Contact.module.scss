@@ -1,0 +1,12 @@
+@import '/src/styles/Variables';
+
+.contact {
+	figure {
+		background: aqua;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+}
+@media screen and (max-width: $mobile) {
+}

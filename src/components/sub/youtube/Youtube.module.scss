@@ -1,0 +1,12 @@
+@import '/src/styles/Variables';
+
+.youtube {
+	figure {
+		background: pink;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+}
+@media screen and (max-width: $mobile) {
+}
