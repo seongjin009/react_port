@@ -4,6 +4,8 @@ import Department from './components/sub/department/Department';
 import Youtube from './components/sub/youtube/Youtube';
 import './styles/Global.scss';
 import Members from './components/sub/members/Members';
+import Contact from './components/sub/Contact/Contact';
+import Gallery from './components/sub/gallery/Gallery';
 
 function App() {
 	return (
@@ -13,6 +15,8 @@ function App() {
 
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/Members' component={Members} />
+			<Route path='/Contact' component={Contact} />
+			<Route path='/Gallery' component={Gallery} />
 		</>
 	);
 }

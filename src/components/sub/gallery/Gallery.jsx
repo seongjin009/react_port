@@ -1,10 +1,11 @@
-import Layout from '../../common/layout/Layout';
-import styles from './Gallery.module.scss';
+// import styles from './Department.module.scss';
+// import clsx from 'clsx';
+import Layout from '../../common/layout/layout';
 
-export default function Galley() {
+export default function Gallery() {
 	return (
-		<Layout title={'Gallery'} className={styles.gallery}>
-			<p>갤러리 페이지 전용 컨텐츠가 올자리</p>
+		<Layout title={'Gallery'}>
+			<p>갤러리 페이지입니다</p>
 		</Layout>
 	);
 }

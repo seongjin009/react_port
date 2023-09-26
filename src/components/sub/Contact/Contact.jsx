@@ -1,10 +1,11 @@
-import Layout from '../../common/layout/Layout';
-import styles from './Contact.module.scss';
+// import styles from './Department.module.scss';
+// import clsx from 'clsx';
+import Layout from '../../common/layout/layout';
 
 export default function Contact() {
 	return (
-		<Layout title={'Contact Us'} className={styles.contact}>
-			<p>찾아오는 길 페이지 전용 컨텐츠가 올자리</p>
+		<Layout title={'Contact'}>
+			<p>콘텍트 페이지입니다</p>
 		</Layout>
 	);
 }
