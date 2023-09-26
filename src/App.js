@@ -12,7 +12,6 @@ function App() {
 		<>
 			<Header />
 			<Route path='/department' component={Department} />
-
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/Members' component={Members} />
 			<Route path='/Contact' component={Contact} />
