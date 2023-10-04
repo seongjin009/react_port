@@ -1,5 +1,7 @@
 import Layout from '../../common/layout/layout';
 import { useEffect, useState } from 'react';
+import style from './Department.module.scss';
+
 const path = process.env.PUBLIC_URL;
 
 export default function Department() {
@@ -25,33 +27,35 @@ export default function Department() {
 	}, []);
 
 	return (
-		<Layout title={'Department'}>
-			<div>
-				{History.map((data, idx) => {
+		<Layout title={'Department'} styleName={style.department}>
+			<div className={style.historyBox}>
+				<div>
+					{History.map((data, idx) => {
+						return (
+							<article key={idx}>
+								{/* {2016: 배열} */}
+								<h2>{Object.keys(data)[0]}</h2>
+								<ul>
+									{Object.values(data)[0].map((data, idx) => {
+										return <li key={idx}>{data}</li>;
+									})}
+								</ul>
+							</article>
+						);
+					})}
+				</div>
+				{Department.map((member, idx) => {
 					return (
 						<article key={idx}>
-							{/* {2016: 배열} */}
-							<h2>{Object.keys(data)[0]}</h2>
-							<ul>
-								{Object.values(data)[0].map((data, idx) => {
-									return <li key={idx}>{data}</li>;
-								})}
-							</ul>
+							<div className='pic'>
+								<img src={`${path}/img/${member.pic}`} alt={member.name} />
+							</div>
+							<h2>{member.name}</h2>
+							<p>{member.position}</p>
 						</article>
 					);
 				})}
 			</div>
-			{Department.map((member, idx) => {
-				return (
-					<article key={idx}>
-						<div className='pic'>
-							<img src={`${path}/img/${member.pic}`} alt={member.name} />
-						</div>
-						<h2>{member.name}</h2>
-						<p>{member.position}</p>
-					</article>
-				);
-			})}
 		</Layout>
 	);
 }
