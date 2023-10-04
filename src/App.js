@@ -1,5 +1,5 @@
 import Header from './components/common/header/Header';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Department from './components/sub/department/Department';
 import Youtube from './components/sub/youtube/Youtube';
 import './styles/Global.scss';
@@ -10,7 +10,17 @@ import Gallery from './components/sub/gallery/Gallery';
 function App() {
 	return (
 		<>
-			<Header />
+			<Switch>
+				<Route exact path='/'>
+					{/* 메인 페이지 전용 */}
+					<Header />
+				</Route>
+				{/* 서브 페이지 전용 */}
+
+				<Route path='/'>
+					<Header />
+				</Route>
+			</Switch>
 			<Route path='/department' component={Department} />
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/Members' component={Members} />

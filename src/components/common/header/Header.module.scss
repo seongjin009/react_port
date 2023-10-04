@@ -1,3 +1,5 @@
+@import '/src/styles/Variables.scss';
+
 .header {
 	width: 100%;
 	padding: 5vh 10vw;
@@ -20,6 +22,47 @@
 		li {
 			a.active {
 				color: hotpink;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.header {
+		position: relative;
+		background-color: lightcoral;
+		h1 {
+			color: lightcyan;
+		}
+
+		ul {
+			position: absolute;
+			right: 3%;
+			top: 40%;
+			font-size: 0.8 rem;
+			li {
+				color: lightgreen;
+				a.active {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.header {
+		background: aquamarine;
+		h1 {
+			color: lightcoral;
+		}
+		ul {
+			font-size: 0.6rem;
+			li {
+				color: lightcoral;
+				a.active {
+					color: #333;
+				}
 			}
 		}
 	}
