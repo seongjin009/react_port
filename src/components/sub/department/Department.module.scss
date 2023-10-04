@@ -4,10 +4,22 @@
 		height: 30vh;
 		background: red;
 	}
-	.content {
-		width: 80vw;
-		margin: 5vh auto;
-		min-height: 60vh;
-		border: 1px solid #eee;
+	.historyBox {
+		article {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			padding: 100px 0px;
+
+			h2 {
+				width: 45%;
+				text-align: right;
+			}
+			ul {
+				width: 50%;
+			}
+		}
 	}
 }
