@@ -29,25 +29,25 @@ export default function Department() {
 	return (
 		<Layout title={'Department'} styleName={style.department}>
 			<div className={style.historyBox}>
-				<div>
-					{History.map((data, idx) => {
-						return (
-							<article key={idx}>
-								{/* {2016: 배열} */}
-								<h2>{Object.keys(data)[0]}</h2>
-								<ul>
-									{Object.values(data)[0].map((data, idx) => {
-										return <li key={idx}>{data}</li>;
-									})}
-								</ul>
-							</article>
-						);
-					})}
-				</div>
+				{History.map((data, idx) => {
+					return (
+						<article key={idx}>
+							{/* {2016: 배열} */}
+							<h2>{Object.keys(data)[0]}</h2>
+							<ul>
+								{Object.values(data)[0].map((data, idx) => {
+									return <li key={idx}>{data}</li>;
+								})}
+							</ul>
+						</article>
+					);
+				})}
+			</div>
+			<div className={style.memberBox}>
 				{Department.map((member, idx) => {
 					return (
 						<article key={idx}>
-							<div className='pic'>
+							<div className={style.pic}>
 								<img src={`${path}/img/${member.pic}`} alt={member.name} />
 							</div>
 							<h2>{member.name}</h2>
