@@ -10,12 +10,14 @@ export default function Layout({ title, children, styleName }) {
 	const frame = useRef(null);
 	const tit = useRef(null);
 
-	const splitText = (ref) => {
+	const splitText = (ref, gap, delay = 0) => {
 		let tags = '';
+		let count = 0;
 
 		//for of로 반복처리 하면서 span태그로 감싸줌
 		for (let letter of ref.current.innerText) {
-			tags += `<span>${letter}</span>`;
+			tags += `<span 'transitsiosn-delay:${gap * count + delay}s>${letter}</span>`;
+			count++;
 		}
 		//기존 참조객체 안쪽의 글자는 지워주고
 		ref.current.innerText = '';
@@ -31,7 +33,8 @@ export default function Layout({ title, children, styleName }) {
 		//useRef값을 변경해도 리액트는 변경점을 인지 못해서 재렌더링이 안되기 때문에
 		setIsOn(true);
 
-		splitText(tit);
+		splitText(tit, 0.1, 1);
+		setTimeout(() => setIsOn(true), 300);
 	}, []);
 
 	return (
