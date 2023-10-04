@@ -1,4 +1,4 @@
-import Layout from '../../common/layout/layout';
+import Layout from '../../common/layout/Layout';
 import { useEffect, useState } from 'react';
 import style from './Department.module.scss';
 

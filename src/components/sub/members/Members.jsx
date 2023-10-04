@@ -1,6 +1,6 @@
 // import styles from './Department.module.scss';
 // import clsx from 'clsx';
-import Layout from '../../common/layout/layout';
+import Layout from '../../common/layout/Layout';
 
 export default function Members() {
 	return (
